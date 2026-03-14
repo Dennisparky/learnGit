@@ -1,0 +1,18 @@
+{
+  "commands": [
+    {
+      "name": "git init",
+      "description": "Initialize a new Git repository.",
+      "syntax": "git init",
+      "example": "git init",
+      "notes": "This creates a new .git directory in the current folder."
+    },
+    {
+      "name": "git commit",
+      "description": "Save a snapshot of staged changes.",
+      "syntax": "git commit -m \"message\"",
+      "example": "git commit -m \"Added login feature\"",
+      "notes": "Always use descriptive commit messages."
+    }
+  ]
+}
