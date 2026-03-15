@@ -9,14 +9,112 @@
 </head>
 
 <body>
-    <header>
-        <h1>GitLearn</h1>
-        <p>Interactive Git Learning Notes Platform</p>
-    </header>
-    <main>
-        <p>Welcome to GitLearn. This is the home page.</p>
-    </main>
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>GitLearn</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="index.html#basics">Git Basics</a></li>
+                    <li><a href="commands.html">Git Commands</a></li>
+                    <li><a href="concepts.html#branches">Branching</a></li>
+                    <li><a href="concepts.html#merges">Merging</a></li>
+                    <li><a href="workflows.html">Workflows</a></li>
+                    <li><a href="index.html#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="index.html#cheat-sheet">Git Cheat Sheet</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+                <div class="header-title">
+                    <h1>GitLearn</h1>
+                    <p>Interactive Git learning notes with examples and tips.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input id="search-input" type="search" placeholder="Search commands…"
+                            aria-label="Search commands" />
+                    </div>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="section" id="basics">
+                    <h2>Git Basics</h2>
+                    <p>Git is a distributed version control system that helps developers track changes to files and
+                        collaborate with others.</p>
+
+                    <h3>What is Git?</h3>
+                    <p>Git stores snapshots of your project over time. It keeps a history of changes so you can revisit
+                        or revert to earlier versions when needed.</p>
+
+                    <h3>Why version control matters</h3>
+                    <ul>
+                        <li>Track who changed what and when.</li>
+                        <li>Undo mistakes without losing work.</li>
+                        <li>Collaborate safely with teammates.</li>
+                    </ul>
+
+                    <h3>How Git works</h3>
+                    <p>Git uses three main areas: the <strong>working directory</strong>, the <strong>staging
+                            area</strong>, and the <strong>repository</strong>. You edit files, stage them, then commit
+                        snapshots.</p>
+
+                    <p>Explore the pages to learn commands, workflows, and practical tips.</p>
+                </section>
+
+                <section class="section" id="troubleshooting">
+                    <h2>Troubleshooting</h2>
+                    <p>Git can sometimes behave in unexpected ways, but most issues can be resolved with a few helpful
+                        commands and best practices.</p>
+
+                    <h3>Common problems</h3>
+                    <ul>
+                        <li><strong>Merge conflicts:</strong> Happens when Git can't automatically combine changes.
+                            Resolve conflicts by editing the files, then stage and commit.</li>
+                        <li><strong>Detached HEAD:</strong> Occurs when you checkout a specific commit instead of a
+                            branch. Switch back to a branch to continue working.</li>
+                        <li><strong>Accidental commits:</strong> Use <code>git reset</code> to undo commits locally
+                            before pushing.</li>
+                    </ul>
+
+                    <h3>Quick troubleshooting commands</h3>
+                    <ul>
+                        <li><code>git status</code> — See what has changed.</li>
+                        <li><code>git log --oneline</code> — View commit history.</li>
+                        <li><code>git diff</code> — Compare changes.</li>
+                        <li><code>git stash</code> — Save work without committing.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="cheat-sheet">
+                    <h2>Git Cheat Sheet</h2>
+                    <p>A quick reference for the most common Git commands.</p>
+
+                    <ul>
+                        <li><code>git init</code> — Start a new repository.</li>
+                        <li><code>git clone &lt;url&gt;</code> — Copy a remote repository locally.</li>
+                        <li><code>git add &lt;file&gt;</code> — Stage changes.</li>
+                        <li><code>git commit -m &quot;message&quot;</code> — Save staged changes.</li>
+                        <li><code>git push</code> — Send commits to remote.</li>
+                        <li><code>git pull</code> — Fetch and merge remote changes.</li>
+                    </ul>
+
+                    <p>Use this page as a starting point and jump into the commands page to see examples.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

@@ -9,13 +9,100 @@
 </head>
 
 <body>
-    <header>
-        <h1>Git Concepts</h1>
-    </header>
-    <main>
-        <p>Concepts documentation will go here.</p>
-    </main>
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>GitLearn</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#basics">Git Basics</a></li>
+                    <li><a href="commands.html">Git Commands</a></li>
+                    <li><a href="concepts.html#branches">Branching</a></li>
+                    <li><a href="concepts.html#merges">Merging</a></li>
+                    <li><a href="workflows.html">Workflows</a></li>
+                    <li><a href="index.html#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="index.html#cheat-sheet">Git Cheat Sheet</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+                <div class="header-title">
+                    <h1>Git Concepts</h1>
+                    <p>Understand how Git tracks history, manages branches, and enables collaboration.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input id="search-input" type="search" placeholder="Search commands…"
+                            aria-label="Search commands" />
+                    </div>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="section" id="concepts-overview">
+                    <h2>How Git Works</h2>
+                    <p>Git tracks changes as a series of snapshots. Each commit points to a snapshot of your project and
+                        records metadata like author, date, and message.</p>
+                </section>
+
+                <section class="section" id="commits">
+                    <h2>Commits</h2>
+                    <p>A commit is a recorded snapshot of your project at a point in time. Commits form a history that
+                        you can traverse, revert, and share.</p>
+
+                    <h3>Commit structure</h3>
+                    <ul>
+                        <li><strong>Message:</strong> Describes what changed.</li>
+                        <li><strong>Snapshot:</strong> The state of tracked files.</li>
+                        <li><strong>Parent:</strong> Reference to the previous commit.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="branches">
+                    <h2>Branches</h2>
+                    <p>Branches are pointers to commits. They let you work on new features without affecting the main
+                        codebase.</p>
+
+                    <h3>Branching in practice</h3>
+                    <p>Create a branch for each feature or fix, then merge it back when ready. This keeps history clean
+                        and makes code review easier.</p>
+                </section>
+
+                <section class="section" id="merges">
+                    <h2>Merging</h2>
+                    <p>Merging combines changes from one branch into another. Git automatically merges when possible but
+                        may require manual resolution if there are conflicts.</p>
+
+                    <h3>Merge conflicts</h3>
+                    <p>Conflicts happen when the same lines are changed in multiple branches. Resolve them by editing
+                        the file and then staging the result.</p>
+                </section>
+
+                <section class="section" id="remotes">
+                    <h2>Remotes</h2>
+                    <p>Remote repositories are versions of your project stored on another server (e.g., GitHub). You can
+                        fetch, push, and pull changes between local and remote copies.</p>
+
+                    <h3>Common remote commands</h3>
+                    <ul>
+                        <li><code>git remote -v</code> — List remote connections.</li>
+                        <li><code>git fetch</code> — Download new data from the remote.</li>
+                        <li><code>git push</code> — Upload local commits to a remote.</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

@@ -9,13 +9,111 @@
 </head>
 
 <body>
-    <header>
-        <h1>Git Workflows</h1>
-    </header>
-    <main>
-        <p>Workflows documentation will go here.</p>
-    </main>
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>GitLearn</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#basics">Git Basics</a></li>
+                    <li><a href="commands.html">Git Commands</a></li>
+                    <li><a href="concepts.html#branches">Branching</a></li>
+                    <li><a href="concepts.html#merges">Merging</a></li>
+                    <li><a class="active" href="workflows.html">Workflows</a></li>
+                    <li><a href="index.html#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="index.html#cheat-sheet">Git Cheat Sheet</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+                <div class="header-title">
+                    <h1>Git Workflows</h1>
+                    <p>Common branching and release strategies used in real-world teams.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input id="search-input" type="search" placeholder="Search commands…"
+                            aria-label="Search commands" />
+                    </div>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="section" id="workflow-overview">
+                    <h2>What is a Workflow?</h2>
+                    <p>A Git workflow defines how a team uses branches, merges, and releases to build software
+                        collaboratively.</p>
+                </section>
+
+                <section class="section" id="feature-branch">
+                    <h2>Feature Branch Workflow</h2>
+                    <p>In this workflow, developers create a new branch for each feature or fix, then merge back into
+                        the main branch when the work is complete.</p>
+
+                    <h3>Real-world scenario</h3>
+                    <p>Imagine a team building a new login experience. Each developer creates a branch like
+                        <code>feature/login-ui</code> or <code>feature/oauth</code>, works independently, and opens a
+                        pull request when ready.
+                    </p>
+
+                    <h3>Key steps</h3>
+                    <ul>
+                        <li><code>git checkout -b feature/your-feature</code> — Create and switch to a feature branch.
+                        </li>
+                        <li>Work on the feature and commit changes.</li>
+                        <li><code>git checkout main</code> and <code>git merge feature/your-feature</code> — Merge into
+                            the main branch.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="github-flow">
+                    <h2>GitHub Flow</h2>
+                    <p>GitHub Flow is a lightweight workflow centered around short-lived branches and pull requests.</p>
+
+                    <h3>Real-world scenario</h3>
+                    <p>A developer fixes a bug and creates a branch named <code>fix/auth-bug</code>. They push the
+                        branch to GitHub, open a pull request, and teammates review before merging.</p>
+
+                    <h3>Key steps</h3>
+                    <ul>
+                        <li><code>git checkout -b fix/auth-bug</code></li>
+                        <li>Commit changes and <code>git push</code> to the remote.</li>
+                        <li>Open a pull request, review, then merge into main.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="git-flow">
+                    <h2>Git Flow</h2>
+                    <p>Git Flow provides a structured approach with long-lived branches for development, releases, and
+                        hotfixes.</p>
+
+                    <h3>Real-world scenario</h3>
+                    <p>A project has multiple releases. Developers work on a <code>develop</code> branch, create
+                        <code>feature/*</code> branches, and prepare releases on a <code>release/*</code> branch.
+                    </p>
+
+                    <h3>Key branches</h3>
+                    <ul>
+                        <li><code>main</code> — Production-ready code.</li>
+                        <li><code>develop</code> — Latest development changes.</li>
+                        <li><code>feature/*</code> — New features.</li>
+                        <li><code>release/*</code> — Preparing a new release.</li>
+                        <li><code>hotfix/*</code> — Quick patches to production.</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

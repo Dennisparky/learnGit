@@ -1,18 +1,74 @@
 {
-  "commands": [
-    {
-      "name": "git init",
-      "description": "Initialize a new Git repository.",
-      "syntax": "git init",
-      "example": "git init",
-      "notes": "This creates a new .git directory in the current folder."
-    },
-    {
-      "name": "git commit",
-      "description": "Save a snapshot of staged changes.",
-      "syntax": "git commit -m \"message\"",
-      "example": "git commit -m \"Added login feature\"",
-      "notes": "Always use descriptive commit messages."
-    }
-  ]
+    "commands": [
+        {
+            "name": "git init",
+            "description": "Initialize a new Git repository.",
+            "syntax": "git init",
+            "example": "git init",
+            "notes": "Creates a new .git folder and begins tracking changes."
+        },
+        {
+            "name": "git clone",
+            "description": "Copy a repository from a remote source.",
+            "syntax": "git clone <repository-url>",
+            "example": "git clone https://github.com/octocat/hello-world.git",
+            "notes": "Create a local copy of an existing project."
+        },
+        {
+            "name": "git add",
+            "description": "Stage changes to be included in the next commit.",
+            "syntax": "git add <file>",
+            "example": "git add README.md",
+            "notes": "Add modified or new files to the staging area."
+        },
+        {
+            "name": "git commit",
+            "description": "Record a snapshot of staged changes.",
+            "syntax": "git commit -m 'message'",
+            "example": "git commit -m 'Add login validation'",
+            "notes": "Commits should have clear, descriptive messages."
+        },
+        {
+            "name": "git push",
+            "description": "Upload local commits to a remote repository.",
+            "syntax": "git push <remote> <branch>",
+            "example": "git push origin main",
+            "notes": "Share your work with others by pushing to a remote."
+        },
+        {
+            "name": "git pull",
+            "description": "Fetch and merge changes from a remote repository.",
+            "syntax": "git pull <remote> <branch>",
+            "example": "git pull origin main",
+            "notes": "Keep your local branch up to date with remote changes."
+        },
+        {
+            "name": "git branch",
+            "description": "List, create, or delete branches.",
+            "syntax": "git branch [branch-name]",
+            "example": "git branch feature/login",
+            "notes": "Use branches to isolate work and avoid conflicts."
+        },
+        {
+            "name": "git merge",
+            "description": "Combine changes from another branch into the current branch.",
+            "syntax": "git merge <branch>",
+            "example": "git merge feature/login",
+            "notes": "Merging integrates completed work back into the main branch."
+        },
+        {
+            "name": "git checkout",
+            "description": "Switch branches or restore working tree files.",
+            "syntax": "git checkout <branch>",
+            "example": "git checkout feature/login",
+            "notes": "Switch to another branch to work on a different task."
+        },
+        {
+            "name": "git status",
+            "description": "Show the status of the working directory and staging area.",
+            "syntax": "git status",
+            "example": "git status",
+            "notes": "Use this command frequently to see what is staged, modified, or untracked."
+        }
+    ]
 }

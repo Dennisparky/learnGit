@@ -9,12 +9,58 @@
 </head>
 
 <body>
-    <header>
-        <h1>Git Commands</h1>
-    </header>
-    <main>
-        <p>Commands documentation will go here.</p>
-    </main>
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>GitLearn</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#basics">Git Basics</a></li>
+                    <li><a class="active" href="commands.html">Git Commands</a></li>
+                    <li><a href="concepts.html#branches">Branching</a></li>
+                    <li><a href="concepts.html#merges">Merging</a></li>
+                    <li><a href="workflows.html">Workflows</a></li>
+                    <li><a href="index.html#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="index.html#cheat-sheet">Git Cheat Sheet</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+                <div class="header-title">
+                    <h1>Git Commands</h1>
+                    <p>Common Git commands with explanations, examples, and when to use them.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input id="search-input" type="search" placeholder="Search commands…"
+                            aria-label="Search commands" />
+                    </div>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="section" id="commands-overview">
+                    <h2>Command Reference</h2>
+                    <p>Git commands are the building blocks of your workflow. Each command below includes a description,
+                        syntax, example, and typical use case.</p>
+                </section>
+
+                <section class="section" id="command-list">
+                    <div id="commands-container"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/commands.js"></script>
 </body>
 
